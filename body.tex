@@ -1,0 +1,135 @@
+\section{Introduction}
+\subsection{Motivation and Background}
+Since the Fortran 2008 standard was published in 2010~\cite{iso2010fortran}, a handful of studies in the open literature
+have provided encouraging assessments of Fortran's intrinsic parallel programming model, \gls{caf}, running in research
+applications running at scale~\cite{preissl2011multithreaded,garain2015comparing,mozdzynski2015partitioned}.   One of the
+most attractive features of \gls{caf} is the ability to express parallel algorithms once within the confines of a single
+language statndard without embedding the use of compiler directives or communication layers defined outside the Fortran
+Fortran langugage standard (e.g., no \gls{mpi} or OpenMP.  In theory, this should leave the choice of communication layers
+as a link-time decision.  Ideally, an application developer writes a standard Fortran-only application, compiles it with any
+standard-conforming compiler, and possibly reserves the option to incorporate any one (or more) of several communication layers
+at link-time.
+
+Such flexibility poses the computing equivalent of what food author Michael Pollen termed ``The Omnivore's Dilemma:'' if I
+belong to a species that owes some of its evolutionary advantage to being able to eat a wide variety of foods, what food is
+best for me to eat?  Similiarly, if I can express my parallel algorithm once using \gls{caf} and then consume cycles atop a
+multitide of software stacks and hardware platforms, where best to consume cycles and using which supporting software stack?
+Here we report the results of an initial study of the current options for compiling, linking, and executing a \gls{mini-app}
+designed to be representative of the paralel numerical algorithms and physics employed in the \gls{icar} being developed at
+the \gls{ncar}.
+
+\gls{icar} simules the motion of the atmosphere at kilometer length scales and produces flow patterns with a fidelity that is
+attractive to the hydrology community, which studies surface water.  The animation in Figure~\ref{figure:icar} depicts flow
+patterns at the desired resolution.
+
+\begin{figure*}
+  \centering
+   % Animate frames at 7 fps created via 'ffmpeg -i qvmovie.mp4 -r 7 frame%d.pngr', add control buttons,
+   % and automatically play when the page is viewed:
+   \animategraphics[width=0.85\columnwidth,controls,autoplay]{7}{figures/icar/frames/frame}{1}{30}
+   \caption{An animation of atmospheric flow patterns simulated by the \href{https://github.com/gutmann/icar}{\gls{icar}}.
+      Courtesy of Ethan Gutmann, NCAR.\label{figure:icar}}
+\end{figure*}
+
+\subsection{Objectives}
+
+\section{Methodology}
+\subsection{Numerical algorithms}
+\subsection{Collective subroutines}
+\subsection{Compilers, runtimes, and hardware}
+
+\section{Discussion of Results}
+
+\section{Conclusions}
+
+
+%%%
+%%% Sample tables
+%%%
+
+%\begin{table}
+%  \caption{Frequency of Special Characters}
+%  \label{tab:freq}
+%  \begin{tabular}{ccl}
+%    \toprule
+%    Non-English or Math&Frequency&Comments\\
+%    \midrule
+%    \O & 1 in 1,000& For Swedish names\\
+%    $\pi$ & 1 in 5& Common in math\\
+%    \$ & 4 in 5 & Used in business\\
+%    $\Psi^2_1$ & 1 in 40,000& Unexplained usage\\
+%  \bottomrule
+%\end{tabular}
+%\end{table}
+
+%\begin{table*}
+%  \caption{Some Typical Commands}
+%  \label{tab:commands}
+%  \begin{tabular}{ccl}
+%    \toprule
+%    Command &A Number & Comments\\
+%    \midrule
+%    \texttt{{\char'134}author} & 100& Author \\
+%    \texttt{{\char'134}table}& 300 & For tables\\
+%    \texttt{{\char'134}table*}& 400& For wider tables\\
+%    \bottomrule
+%  \end{tabular}
+%\end{table*}
+% end the environment with {table*}, NOTE not {table}!
+
+%It is strongly recommended to use the package booktabs~\cite{Fear05}
+%and follow its main principles of typography with respect to tables:
+%\begin{enumerate}
+%\item Never, ever use vertical rules.
+%\item Never use double rules.
+%\end{enumerate}
+%It is also a good idea not to overuse horizontal rules.
+
+
+%%%
+%%% Sample figures
+%%%
+
+%\begin{figure}
+%\includegraphics{fly}
+%\caption{A sample black and white graphic.}
+%\end{figure}
+
+%\begin{figure}
+%\includegraphics[height=1in, width=1in]{fly}
+%\caption{A sample black and white graphic
+%that has been resized with the \texttt{includegraphics} command.}
+%\end{figure}
+
+%\begin{figure*}
+%\includegraphics{flies}
+%\caption{A sample black and white graphic
+%that needs to span two columns of text.}
+%\end{figure*}
+%
+%\begin{figure}
+%\includegraphics[height=1in, width=1in]{rosette}
+%\caption{A sample black and white graphic that has
+%been resized with the \texttt{includegraphics} command.}
+%\end{figure}
+
+%\end{document}  % This is where a 'short' article might terminate
+
+
+
+\appendix
+%Appendix A
+\section{Code snippets: collective subroutines?}
+% This next section command marks the start of
+% Appendix B, and does not continue the present hierarchy
+\section{Anything else?}
+
+\begin{acks}
+  The authors would like to thank the CISL and RAL Visitor Program
+
+  The work is
+  supported by the \grantsponsor{GSxxxxx}{National
+  Science Foundation China}{http://dx.doi.org/zz.yyyyy/xxxxx} under Grant
+  No.:~\grantnum{GSxxxxx}{yyyyyyy}
+
+\end{acks}
