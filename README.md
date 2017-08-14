@@ -1,4 +1,4 @@
-# WRF-Hydro submission to [PAW17]
+# Coarray ICAR submission to [PAW17]
 
 ## Prerequisites: 
 LaTeX
