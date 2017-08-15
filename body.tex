@@ -44,6 +44,7 @@ The second system is ``Cori,'' a Cray XC40 which contains \num{12076} compute no
 Both Edison and Cori feature the same ``Aries'' interconnect, with a dragonfly topology.
 All measurements reported here which ran on Cori were executed on the Xeon Phi nodes, running in the ``quadrant`` NUMA configuration, with the MCDRAM configured as a transparent cache to the DDR4 memory.
 We compiled the ICAR code on both systems at NERSC using version 8.6.0 of the Cray Fortran compiler.
+In all runs, we ran the code with one image per physical core (68 images per Xeon Phi node on Cori, 24 images per Xeon node on Edison).
 
 \section{Discussion of Results}
 
