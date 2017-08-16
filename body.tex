@@ -22,22 +22,24 @@ the \gls{ncar}.
 attractive to the hydrology community, which studies surface water.  The animation in Figure~\ref{figure:icar} depicts flow
 patterns at the desired resolution.
 
-\begin{figure*}
-  \centering
+\begin{figure}
+   \vspace{-18pt}
    % Animate frames at 7 fps created via 'ffmpeg -i qvmovie.mp4 -r 7 frame%d.pngr', add control buttons,
    % and automatically play when the page is viewed:
-   \animategraphics[width=0.85\columnwidth,controls,autoplay]{7}{figures/icar/frames/frame}{1}{30}
+   \vbox{\hspace{-24pt}
+   \animategraphics[width=1.1\columnwidth,controls,autoplay]{7}{figures/icar/frames/frame}{1}{30}
+   }
    \caption{An animation of atmospheric flow patterns simulated by the \href{https://github.com/gutmann/icar}{\gls{icar}}.
       Courtesy of Ethan Gutmann, NCAR.\label{figure:icar}}
-\end{figure*}
+\end{figure}
 
-\begin{figure*}[p]
+\begin{figure*}
   \includegraphics[width=\textwidth]{figures/fig1_speedup.png}
   \includegraphics[width=\textwidth]{figures/fig2_timing.png}
   \caption{Speedup and timing results.\href{https://github.com/gutmann/coarray_icar}{Coarray ICAR}.\label{fig1-2}}
 \end{figure*}
 
-\begin{figure*}[p]
+\begin{figure*}
   \includegraphics[width=\textwidth]{figures/fig3_cross_platform.png}
   \includegraphics[width=\textwidth]{figures/fig4_extreme_scaling.png}
    \caption{Cross-platform and extreme scaling results.\href{https://github.com/gutmann/coarray_icar}{Coarray ICAR}.\label{fig3-4}}
