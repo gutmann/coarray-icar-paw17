@@ -56,7 +56,7 @@
 \email{damian@sourceryinstitute.org}
 \renewcommand{\shortauthors}{D. Rouson et al.}
 
-\author{Ethan Gutmann}
+\author{Ethan D Gutmann}
 \orcid{0000-0003-4077-3430}
 \affiliation{%
   \institution{National Center for Atmospheric Research}
@@ -68,7 +68,7 @@
 \email{gutmann@ucar.edu}
 
 \author{Brian Friesen}
-\orcid{0000-0003-4077-3430}
+\orcid{0000-0002-1572-1631}
 \affiliation{%
   \institution{Lawrence Berkeley National Laboratory}
   \streetaddress{1 Cyclotron Road, Mail Stop 59R4010A}
@@ -91,13 +91,13 @@
 
 \begin{abstract}
 We present the results on the scalability and performance of an open-source, \gls{caf} \gls{mini-app} that solves
-several parallel, numerical algorithmns known to dominate the execution of the \gls{icar}~\cite{gutmann2016intermediate}.
+several parallel, numerical algorithms known to dominate the execution of the \gls{icar}~\cite{gutmann2016intermediate}.
 The solver employs standard Fortran 2008 features and includes several Fortran 2008 implementations of the collective
-subroutines defined in the Committe Draft the upcoming Fortran 2015 standard.  The ability of \gls{caf} to run atop various
+subroutines defined in the Committee Draft of the upcoming Fortran 2015 standard.  The ability of \gls{caf} to run atop various
 communication layers and the increasing compiler support for \gls{caf} facilitated initial evaluations of several compliers,
-runtime libraries and hardware platforms.  Results are presented for the GNU, Intel, and Cray compilers, each of which offers
+runtime libraries and hardware platforms.  Results are presented for the GNU and Cray compilers, each of which offers
 different parallel runtime libraries employing one or more communication layers, including \gls{mpi}, OpenSHMEM, and proprietary
-alternatives.  We studied performance on both multi- and many-core processors runnning on disributed-memory systems.  The
+alternatives.  We studied performance on both multi- and many-core processors running on distributed-memory systems.  The
 results of initial simulations suggest promising scaling behavior across a range of hardware, compiler, and runtime choices
 on platforms ranging up to 100,000 cores.
 \end{abstract}
@@ -124,7 +124,7 @@ on platforms ranging up to 100,000 cores.
 \ccsdesc[500]{Software and its engineering~Parallel programming languages}
 \ccsdesc[300]{Applied computing~Environmental sciences}
 
-\keywords{coarray Fortran, computational hydrology, parallel programming}
+\keywords{coarray Fortran, computational hydrometeorology, parallel programming}
 
 \maketitle
 
