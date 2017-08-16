@@ -50,13 +50,17 @@ patterns at the desired resolution.
 \subsection{Collective subroutines}
 \subsection{Compilers, runtimes, and hardware}
 
-We performed the experiments presented here on two supercomputers at at the National Energy Research Scientific Computing Center (NERSC), located at Lawrence Berkeley National Laboratory.
+We performed the experiments presented here on two supercomputers at at the National Energy Research Scientific Computing Center (NERSC), 
+located at Lawrence Berkeley National Laboratory and one supercomputer at the National Center for Atmospheric Research (NCAR). 
 One system is ``Edison,'' a Cray XC30 featuring 5586 nodes with two sockets of 12-core Intel Xeon Processor E5-2695 v2 (``Ivy Bridge''), running at \num{2.4}~\si{\giga\hertz}.
 The second system is ``Cori,'' a Cray XC40 which contains \num{12076} compute nodes, spanning two architectures. \num{2388} nodes each have two sockets of 16-core Intel Xeon Processor E5-2698 v3 (``Haswell'') operating at \num{2.3}~\si{\giga\hertz}; the other \num{9688} nodes are single-socket, 68-core Intel Xeon Phi Processor 7250 (``Knights Landing'') at \num{1.4}~\si{\giga\hertz}.
 Both Edison and Cori feature the same ``Aries'' interconnect, with a dragonfly topology.
 All measurements reported here which ran on Cori were executed on the Xeon Phi nodes, running in the ``quadrant`` NUMA configuration, with the MCDRAM configured as a transparent cache to the DDR4 memory.
-We compiled the ICAR code on both systems at NERSC using version 8.6.0 of the Cray Fortran compiler.
-In all runs, we ran the code with one image per physical core (68 images per Xeon Phi node on Cori, 24 images per Xeon node on Edison).
+The third system is ``Cheyenne,'' an SGI ICE XA Cluster with \num{4032} compute nodes, with two sockets of 18-core Intel Xeon Processor E5-2697 v4 (``Broadwell''), running at \num{2.3}~\si{\giga\hertz}.
+Cheyenne uses a Mellanox EDR infiniband interconnect with a partial 9D Enhanced Hypercube single-plane topology. 
+We compiled the ICAR code on both systems at NERSC using version 8.6.0 of the Cray Fortran compiler, and at NCAR using version 6.3 of the gfortran compiler. 
+gfortran uses the opencoarrays library to provide coarray fortran support, and we tested the code using both SGI MPT MPI and OpenSHMEM implementations. 
+In all runs, we ran the code with one image per physical core (68 images per Xeon Phi node on Cori, 24 images per Xeon node on Edison, 36 images per node on Cheyenne).
 
 \section{Discussion of Results}
 
